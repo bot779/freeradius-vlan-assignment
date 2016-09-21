@@ -1,0 +1,26 @@
+DEFAULT NAS-Port-Type == Wireless-802.11, Auth-Type =Accept
+        Tunnel-Type = 13,
+        Tunnel-Medium-Type = 6,
+        Exec-Program-Wait = "/etc/raddb/mac_query.sh",
+        Termination-Action = 1
+
+
+DEFAULT NAS-Port-Type == Ethernet, Auth-Type = Accept
+        Tunnel-Type = 13,
+        Tunnel-Medium-Type = 6,
+        Exec-Program-Wait = "/etc/raddb/mac_query.sh",
+        Termination-Action = 1
+
+DEFAULT NAS-Port-Type == Virtual, Auth-Type = Accept
+        Exec-Program-Wait = "/etc/raddb/mac_query.sh",
+        Termination-Action = 1
+
+0011439c54c3 User-Password == "0011439c54c3"
+        Tunnel-Type = 13,
+        Tunnel-Medium-Type = 6,
+        Tunnel-Private-Group-ID = 3,
+        Exec-Program-Wait = "/etc/raddb/mac_query.sh",
+        Termination-Action = 1
+
+DEFAULT Auth-Type = System
+        Fall-Through = 1
